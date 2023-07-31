@@ -6,12 +6,15 @@ public class Client {
     public static void main(String[] args) {
         String name = "empty";
         String reply = "empty";
+        String ip = "";
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your name (Please enter your name to join the chat): ");
         reply = sc.nextLine();
+        System.out.println("Type the server's IP: ");
+        ip = sc.nextLine();
         name = reply;
 
-        try (Socket socket = new Socket("192.168.0.199", 8080)) {
+        try (Socket socket = new Socket(ip, 8080)) {
             PrintWriter cout = new PrintWriter(socket.getOutputStream(), true);
 
             ThreadClient threadClient = new ThreadClient(socket);
