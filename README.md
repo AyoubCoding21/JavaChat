@@ -2,8 +2,7 @@
 A simple cross-device console chat app using Java.
 The console could connect a lot of clients and send messages between them.
 # WARNING : 
-I putted into a section of the client.java file my local IP adress, so modify it to your local address (address of the computer who's gonna be the server)
-The section to modify is : try (Socket socket = new Socket("192.168.0.199", 8080)), change the IP address there to your local server IP address.
+You need to know the IP of the server so you can execute the client.
 To execute the server : chmod u+x ./server.sh && ./server.sh
 To execute the client : chmod u+x ./client.sh && ./client.sh
 # How to use in cross-device
